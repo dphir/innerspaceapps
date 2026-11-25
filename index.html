@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<!-- © 2026 Defir Ilmi Faridha. All rights reserved. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#E6DEF7">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>InnerSpace</title>
+
+<style>
+:root{--b1:#E6DEF7;--b2:#F8F5FD;--cd:#fff;--ink:#2B2540;--mu:#655E80;--ac:#6B54A6;--bt:#6B54A6;--bx:#fff;--a2:#EEE8FB;--ln:#E4DDF3;--h1:#D9CFF4;--h2:#F6DDE6;--sh:0 8px 24px rgba(80,60,140,.12);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--b1:#1D1836;--b2:#141126;--cd:#231F3C;--ink:#EEEAF9;--mu:#B0A9CC;--ac:#B9A8F2;--bt:#B9A8F2;--bx:#1B1633;--a2:#2E2850;--ln:#383260;--h1:#2A2350;--h2:#3E2F5E;--sh:0 8px 24px rgba(0,0,0,.35);color-scheme:dark}}
+:root[data-theme="dark"]{--b1:#1D1836;--b2:#141126;--cd:#231F3C;--ink:#EEEAF9;--mu:#B0A9CC;--ac:#B9A8F2;--bt:#B9A8F2;--bx:#1B1633;--a2:#2E2850;--ln:#383260;--h1:#2A2350;--h2:#3E2F5E;--sh:0 8px 24px rgba(0,0,0,.35);color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:linear-gradient(180deg,var(--b1),var(--b2) 380px) no-repeat var(--b2);color:var(--ink);font:16px/1.5 Inter,system-ui,-apple-system,sans-serif}
+main{max-width:480px;margin:0 auto;padding:0 16px 120px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;margin:0;line-height:1.2}
+button{font:inherit;color:var(--ink);cursor:pointer}
+.mu{color:var(--mu);font-size:14px}.sm{font-weight:600;font-size:15px}
+.hero{position:relative;margin:0 -16px;height:220px;overflow:hidden;border-radius:0 0 30px 30px;background:linear-gradient(180deg,var(--h1),var(--h2))}
+.hero svg{position:absolute;inset:0;width:100%;height:100%}
+.hg{position:absolute;left:20px;right:20px;top:14px}.hg h1{font-size:32px;margin-top:22px}.hg p{margin:4px 0 0;color:var(--mu)}
+.hb,.tb{display:flex;justify-content:space-between;align-items:center}
+.tb{padding:16px 0 4px}.tb h1{font-size:28px}
+.lg{display:flex;background:var(--cd);border-radius:12px;box-shadow:var(--sh);overflow:hidden}.lg button{border:0;background:none;padding:8px 13px;font-weight:600;font-size:13px;min-height:40px;color:var(--mu)}.lg .on{background:var(--bt);color:var(--bx)}
+.ib{width:44px;height:44px;border-radius:50%;border:0;background:var(--cd);box-shadow:var(--sh);display:inline-flex;align-items:center;justify-content:center;margin-left:8px;color:var(--ac)}
+svg.ic{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cd{background:var(--cd);border-radius:22px;box-shadow:var(--sh);padding:18px;margin:14px 0;animation:up .45s ease both}.pull{margin-top:-30px;position:relative}
+@keyframes up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.rs{justify-content:space-between}
+.mo{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:12px 0 16px}
+.mb{border:1.5px solid var(--ln);background:var(--b2);border-radius:16px;padding:10px 0 8px;font-size:28px;display:flex;flex-direction:column;align-items:center;transition:transform .15s}
+.mb small{font-size:12px;color:var(--mu);margin-top:2px}.mb.on{background:var(--a2);border-color:var(--ac);transform:scale(1.07)}
+.btn{display:block;width:100%;border:0;background:var(--bt);color:var(--bx);border-radius:16px;min-height:52px;font-weight:600;font-size:16px;box-shadow:var(--sh)}
+.btn.g{background:none;box-shadow:none;color:var(--ac);min-height:44px}
+.chip{border:1.5px solid var(--ln);background:var(--cd);border-radius:22px;padding:8px 14px;font-size:14px;min-height:44px}.chip.on{background:var(--a2);border-color:var(--ac);font-weight:600}
+.op{display:flex;gap:14px;align-items:center;width:100%;text-align:left;background:var(--cd);box-shadow:var(--sh);border:2px solid transparent;border-radius:20px;padding:16px;margin:12px 0}
+.op.on{border-color:var(--ac)}.op b{display:block;font-family:Fraunces,Georgia,serif;font-size:18px}.op span{color:var(--mu);font-size:14px}.op i{font-style:normal;font-size:30px}
+textarea,input[type=text]{width:100%;padding:12px 14px;border:1.5px solid var(--ln);border-radius:14px;background:var(--b2);color:var(--ink);font:inherit}
+textarea{min-height:150px;resize:vertical}
+.pr{height:8px;border-radius:4px;background:var(--ln)}.pr i{display:block;height:8px;border-radius:4px;background:var(--ac);transition:width .3s}
+input[type=range]{width:100%;accent-color:var(--ac)}.val{min-width:28px;font-weight:700;text-align:right}
+.nv{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:center;gap:0;background:var(--cd);border-top:1px solid var(--ln);padding-bottom:env(safe-area-inset-bottom,0px)}
+.nv button{flex:1;max-width:160px;border:0;background:none;padding:10px 2px 8px;font-size:12px;font-weight:600;color:var(--mu);display:flex;flex-direction:column;align-items:center;gap:2px}.nv .on{color:var(--ac)}
+.ins{background:linear-gradient(135deg,#F6D9CF,#F3C9D8);color:#2B2540;border-radius:20px;padding:16px;margin:14px 0}
+.nt{background:var(--a2);border-radius:14px;padding:12px;margin-top:8px;font-size:15px}.nt small{display:inline-block;background:var(--cd);color:var(--ac);border-radius:8px;padding:1px 8px;font-weight:600;margin-bottom:4px}
+.bar{height:10px;border-radius:5px;background:var(--ln);margin-top:3px}.bar i{display:block;height:10px;border-radius:5px}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}.cmp>div{background:var(--a2);border-radius:16px;padding:12px;font-size:14px}
+.gc{background:var(--a2);border-radius:16px;padding:12px;margin-top:8px;font-size:14px}.gc b{display:flex;justify-content:space-between;font-size:15px}
+.tl{border-left:3px solid var(--ac);padding-left:14px;margin-top:8px;display:flex;flex-direction:column;gap:6px;font-size:15px}
+svg.ch{width:100%;height:auto}
+.ov{position:fixed;inset:0;z-index:50;background:linear-gradient(180deg,var(--h1),var(--b2));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:24px;text-align:center}
+.bc{width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,#B9A8F2,#8E7CC3);animation:br 10s ease-in-out infinite}
+@keyframes br{0%{transform:scale(.6)}40%{transform:scale(1)}100%{transform:scale(.6)}}
+@media(prefers-reduced-motion:reduce){.bc,.cd{animation:none}}
+#tt{position:fixed;left:50%;bottom:calc(90px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--b2);padding:9px 15px;border-radius:20px;font-size:14px;opacity:0;transition:opacity .25s;pointer-events:none;z-index:60}#tt.on{opacity:1}
+.ck{display:flex;gap:8px;align-items:center}
+</style></head><body>
+<main id="m"></main><nav class="nv" id="nv"></nav><div id="tt"></div>
+<script>
+(function(){
+var K="is-v2",Q=function(s){return document.querySelector(s)},QA=function(s){return document.querySelectorAll(s)};
+var D={entries:[],notes:[],city:"",name:"",shift:"",hs:false};
+var S={lang:"id",tab:"home",flow:"",st:0,dr:null,nt:null,mood:null,range:30,vf:"",arm:"",bx:"",eds:false,br:null,tm:null};
+function t(a,b){return S.lang==="id"?a:b}
+var EM=[["calm","Tenang","Calm"],["happy","Senang","Happy"],["grateful","Bersyukur","Grateful"],["hopeful","Berharap","Hopeful"],["tired","Lelah","Tired"],["anxious","Cemas","Anxious"],["sad","Sedih","Sad"],["disappointed","Kecewa","Disappointed"],["frustrated","Frustrasi","Frustrated"],["angry","Marah","Angry"],["lonely","Kesepian","Lonely"],["overwhelmed","Kewalahan","Overwhelmed"],["unknown","Belum tahu","Not sure yet"]];
+function el(k){for(var i=0;i<EM.length;i++)if(EM[i][0]===k)return S.lang==="id"?EM[i][1]:EM[i][2];return k}
+var MJ=["😣","😔","😐","🙂","😊"],ML=[["Berat","Heavy"],["Rendah","Low"],["Biasa","Okay"],["Baik","Good"],["Hebat","Great"]];
+var QS=[["Apa yang terjadi hari ini sehingga aku merasakan ini?","What happened today that made me feel this way?"],["Apa yang sedang ada di pikiranku?","What is on my mind?"],["Apa yang sebenarnya paling menyakitkan bagiku?","What is really the most painful part for me?"],["Apa yang terasa di tubuhku?","What do I feel in my body?"],["Apa yang aku butuhkan saat ini?","What do I need right now?"],["Apa yang ingin aku katakan kepada diriku sendiri?","What do I want to say to myself?"]];
+var NT=[["reflect","Refleksi","Reflection","Apa yang ingin kamu renungkan hari ini?","What would you like to reflect on today?"],["grat","Rasa syukur","Gratitude","Hal kecil apa yang kamu syukuri hari ini?","What small thing are you grateful for today?"],["insight","Insight","Insight","Apa yang kamu pelajari hari ini? Hal baru, sudut pandang baru, apa saja.","What did you learn today? Something new, a new perspective, anything."]];
+var CL=["#8E7CC3","#E8B04A","#6CBFAE","#E58F7B","#7BA7E0"];
+var IC={home:'<path d="M3 11l9-8 9 8v10h-6v-6H9v6H3z"/>',ins:'<path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/>',jou:'<circle cx="5" cy="18" r="2"/><circle cx="19" cy="6" r="2"/><path d="M7 18c8 0 2-12 10-12"/>',me:'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/>'};
+function ic(n){return '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">'+IC[n]+'</svg>'}
+function p2(n){return(n<10?"0":"")+n}function ds(d){return d.getFullYear()+"-"+p2(d.getMonth()+1)+"-"+p2(d.getDate())}
+function pd(s){return new Date(s+"T00:00:00")}function loc(){return S.lang==="id"?"id-ID":"en-GB"}
+function fd(s){return pd(s).toLocaleDateString(loc(),{day:"numeric",month:"short",year:"numeric"})}
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function toast(m){var x=Q("#tt");x.textContent=m;x.className="on";setTimeout(function(){x.className=""},1900)}
+function save(){try{localStorage.setItem(K,JSON.stringify(D));return true}catch(e){toast(t("Gagal menyimpan. Salin cadanganmu.","Couldn’t save. Copy your backup."));return false}}
+function num(v,a,b){return typeof v==="number"&&v>=a&&v<=b?v:null}
+function ne(e){var a=Array.isArray(e.a)?e.a:[];return{id:String(e.id).slice(0,40),date:e.date,mood:num(e.mood,1,5),int:num(e.int,0,10),aft:num(e.aft,0,10),emo:Array.isArray(e.emo)?e.emo.slice(0,20).map(function(x){return String(x).slice(0,40)}):[],a:[0,1,2,3,4,5].map(function(i){return String(a[i]||"").slice(0,5000)})}}
+function nn(e){return{id:String(e.id).slice(0,40),date:e.date,type:["reflect","grat","insight"].indexOf(e.type)>-1?e.type:"reflect",text:String(e.text||"").slice(0,5000)}}
+function okd(e){return e&&e.id!=null&&/^\d{4}-\d{2}-\d{2}$/.test(e.date)}
+function init(){try{var o=JSON.parse(localStorage.getItem(K)||"null");if(o){D.entries=(o.entries||[]).filter(okd).map(ne);D.notes=(o.notes||[]).filter(okd).map(nn);D.city=String(o.city||"").slice(0,60);D.name=String(o.name||"").slice(0,40);D.shift=String(o.shift||"").slice(0,600);D.hs=!!o.hs}}catch(e){}
+ var l=null;try{l=localStorage.getItem("is-lang")}catch(e){}S.lang=l||((navigator.language||"").slice(0,2)==="id"?"id":"en")}
+function asc(a){return a.slice().sort(function(x,y){return x.date<y.date?-1:x.date>y.date?1:x.id<y.id?-1:1})}
+function LG(){return '<div class="lg"><button class="'+(S.lang==="id"?"on":"")+'" data-a="lang" data-v="id">ID</button><button class="'+(S.lang==="en"?"on":"")+'" data-a="lang" data-v="en">EN</button></div>'}
+function top(ti){return '<div class="tb"><h1>'+ti+'</h1>'+LG()+'</div>'}
+function back(a,v){return '<div style="padding-top:16px"><button class="btn g" style="width:auto;padding:0" data-a="'+a+'"'+(v?' data-v="'+v+'"':'')+'>‹ '+t("Kembali","Back")+'</button></div>'}
+var HL='<svg viewBox="0 0 400 220" preserveAspectRatio="none" aria-hidden="true"><circle cx="330" cy="58" r="17" fill="#FFF3D6" opacity=".9"/><path d="M0 150Q80 110 160 140T320 130T400 140V220H0Z" fill="#CBBDEB" opacity=".7"/><path d="M0 172Q100 130 200 166T400 156V220H0Z" fill="#B7A5E3" opacity=".85"/><path d="M0 196Q120 166 240 194T400 184V220H0Z" fill="#9F8BD6"/></svg>';
+function homeV(){var d=new Date(),h=d.getHours(),g=h<11?["Selamat pagi","Good morning"]:h<15?["Selamat siang","Good afternoon"]:h<18?["Selamat sore","Good afternoon"]:["Selamat malam","Good evening"];
+ return '<div class="hero">'+HL+'<div class="hg"><div class="hb">'+LG()+'</div><h1>'+t(g[0],g[1])+(D.name?", "+esc(D.name):"")+'</h1><p>'+d.toLocaleDateString(loc(),{weekday:"long",day:"numeric",month:"long"})+'</p></div></div>'
+ +'<div class="cd pull"><div class="row rs"><div><h3>'+t("Tenang dulu","Find some calm")+'</h3><div class="mu">'+t("Tarik napas 4 hitungan, buang 6.","Breathe in for 4, out for 6.")+'</div></div><button class="chip on" data-a="br">'+t("Napas 1 menit","1-min breathing")+'</button></div></div>'
+ +'<div class="cd"><h3>'+t("Bagaimana kabarmu hari ini?","How are you today?")+'</h3><div class="mo">'+MJ.map(function(m,i){return '<button class="mb'+(S.mood===i+1?" on":"")+'" data-a="mood" data-v="'+(i+1)+'" aria-label="'+t(ML[i][0],ML[i][1])+'">'+m+'<small>'+t(ML[i][0],ML[i][1])+'</small></button>'}).join("")+'</div><button class="btn" data-a="go">'+t("Lanjut","Continue")+' →</button></div>'
+ +'<p class="mu">'+t("InnerSpace adalah alat refleksi, bukan diagnosis atau terapi. Jika terasa terlalu berat atau kamu berpikir untuk menyakiti diri, hubungi layanan darurat setempat atau orang yang kamu percaya.","InnerSpace is a reflection tool, not a diagnosis or therapy. If things feel too heavy or you are thinking of harming yourself, contact local emergency services or someone you trust.")+'</p>'}
+function brV(){return '<div class="ov"><h2 id="bt">'+t("Tarik napas","Breathe in")+'</h2><div class="bc"></div><div class="mu" id="bs">60</div><button class="btn" style="max-width:260px" data-a="brx">'+t("Selesai","Done")+'</button></div>'}
+function pathV(){return back("back")+'<h2 style="margin:8px 0 4px;font-size:28px">'+t("Mau menulis apa?","What would you like to write?")+'</h2>'+(S.mood?'<div class="mu">'+t("Suasana hati hari ini: ","Today’s mood: ")+MJ[S.mood-1]+' '+t(ML[S.mood-1][0],ML[S.mood-1][1])+'</div>':'')
+ +'<button class="op on" data-a="safe"><i>🛡️</i><div><b>'+t("Ruang Aman untuk Diriku","A Safe Space for Me")+'</b><span>'+t("Enam pertanyaan, semuanya boleh dilewati. Jawabanmu menjadi bahan Wawasan.","Six questions, all skippable. Your answers feed your Insights.")+'</span></div></button>'
+ +'<button class="op" data-a="free"><i>✍️</i><div><b>'+t("Cerita bebas","Free writing")+'</b><span>'+t("Refleksi, rasa syukur, atau insight hari ini. Disimpan sebagai catatan sendiri.","Reflection, gratitude, or today’s insight. Saved as your own note.")+'</span></div></button>'
+ +'<button class="btn g" data-a="mo">'+t("Simpan suasana hati saja","Just save my mood")+'</button>'}
+function sl(f,lab,mn,mx){var v=S.dr[f];return '<div class="sm" style="margin:16px 0 6px">'+lab+'</div><div class="row"><input type="range" style="flex:1;width:auto" min="'+mn+'" max="'+mx+'" value="'+(v==null?Math.round((mn+mx)/2):v)+'" data-f="'+f+'"><span class="val" id="v_'+f+'">'+(v==null?"—":v)+'</span><button class="chip" data-a="clr" data-v="'+f+'" aria-label="'+t("Kosongkan","Clear")+'">×</button></div>'}
+function safeV(){var st=S.st,d=S.dr,h=back("sb");
+ if(st===0)return h+'<div class="cd"><h2>'+t("Ruang Aman untuk Diriku","A Safe Space for Me")+'</h2><p class="mu">'+t("Enam pertanyaan. Kamu boleh melewati yang mana pun dan berhenti kapan saja.","Six questions. Skip any of them and stop whenever you like.")+'</p>'+sl("int",t("Seberapa kuat perasaanmu sekarang? (0–10, opsional)","How strong does this feel right now? (0–10, optional)"),0,10)+'<button class="btn" style="margin-top:20px" data-a="sn">'+t("Mulai","Start")+'</button></div>';
+ if(st>=1&&st<=6)return h.replace('data-a="sb"','data-a="sb"')+'<div class="row rs mu"><span>'+t("Ruang Aman untuk Diriku","A Safe Space for Me")+'</span><span>'+st+' / 6</span></div><div class="pr" style="margin-top:6px"><i style="width:'+Math.round(st/6*100)+'%"></i></div><div class="cd"><h2 style="font-size:24px">'+t(QS[st-1][0],QS[st-1][1])+'</h2><textarea data-q="1" style="margin-top:14px" placeholder="'+t("Tulis seadanya. Satu kalimat pun cukup.","Write whatever comes. One sentence is enough.")+'">'+esc(d.a[st-1])+'</textarea><button class="btn" style="margin-top:14px" data-a="sn">'+t("Lanjut","Next")+'</button><button class="btn g" data-a="sn">'+t("Lewati pertanyaan ini","Skip this question")+'</button></div>';
+ if(st===7)return h+'<div class="cd"><h2>'+t("Kata mana yang terasa paling dekat?","Which words feel closest?")+'</h2><p class="mu">'+t("Pilih satu atau lebih, tulis kata sendiri, atau belum tahu.","Pick any, write your own, or not sure yet.")+'</p><div class="row">'+EM.map(function(x){return '<button class="chip'+(d.emo.indexOf(x[0])>-1?" on":"")+'" data-a="emo" data-v="'+x[0]+'">'+el(x[0])+'</button>'}).join("")+d.emo.filter(function(k){return !EM.some(function(x){return x[0]===k})}).map(function(k){return '<button class="chip on" data-a="emo" data-v="'+esc(k)+'">'+esc(k)+'</button>'}).join("")+'</div><div class="row" style="margin-top:10px"><input type="text" id="ce" style="flex:1;width:auto" placeholder="'+t("Kata lain…","Another word…")+'"><button class="chip" data-a="addemo">'+t("Tambah","Add")+'</button></div>'+sl("aft",t("Setelah menulis, seberapa kuat perasaanmu? (0–10, opsional)","After writing, how strong does it feel? (0–10, optional)"),0,10)+'<button class="btn" style="margin-top:20px" data-a="fin">'+t("Selesai","Finish")+'</button></div>';
+ return '<div class="cd" style="margin-top:24px;text-align:center"><div style="font-size:44px">🌿</div><h2>'+t("Terima kasih sudah menulis","Thank you for writing")+'</h2><p style="line-height:1.9">'+t("Aku boleh terluka tanpa harus menyalahkan diriku.<br>Aku tidak bertanggung jawab atas keputusan orang lain.<br>Aku berhak dihargai.","I may hurt without blaming myself.<br>I am not responsible for other people’s decisions.<br>I deserve to be respected.")+'</p><button class="btn" data-a="tab" data-v="insight">'+t("Lihat Wawasan","See Insights")+'</button><button class="btn g" data-a="tab" data-v="home">'+t("Selesai","Done")+'</button></div>'}
+function freeV(){var n=S.nt,ty=NT.filter(function(x){return x[0]===n.type})[0];
+ return back("back")+'<h2 style="margin:8px 0 12px;font-size:28px">'+t("Cerita bebas","Free writing")+'</h2><div class="row">'+NT.map(function(x){return '<button class="chip'+(n.type===x[0]?" on":"")+'" data-a="ft" data-v="'+x[0]+'">'+t(x[1],x[2])+'</button>'}).join("")+'</div><div class="cd"><div class="mu" style="margin-bottom:10px">'+t(ty[3],ty[4])+'</div><textarea data-n="1" style="min-height:240px">'+esc(n.text)+'</textarea><p class="mu">'+t("Disimpan sebagai catatan, terpisah dari Ruang Aman.","Saved as a note, separate from the Safe Space.")+'</p><button class="btn" data-a="fs">'+t("Simpan catatan","Save note")+'</button></div>'}
+function chart(es,c){var W=320,H=120,P=14,t0=pd(c).getTime(),span=Math.max(864e5,pd(ds(new Date())).getTime()-t0);
+ function X(e){return P+(pd(e.date).getTime()-t0)/span*(W-2*P)}function Y(v,a,b){return H-P-(v-a)/(b-a)*(H-2*P)}
+ function pl(a,f,a1,b1,col,dash){var p=a.map(function(e){return X(e).toFixed(1)+","+Y(e[f],a1,b1).toFixed(1)}),s="";
+  if(p.length>1){if(f==="mood")s+='<polygon fill="'+col+'" opacity=".15" points="'+p.join(" ")+" "+X(a[a.length-1]).toFixed(1)+","+(H-P)+" "+X(a[0]).toFixed(1)+","+(H-P)+'"/>';s+='<polyline fill="none" stroke="'+col+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"'+(dash?' stroke-dasharray="'+dash+'"':"")+' points="'+p.join(" ")+'"/>'}
+  return s+a.map(function(e){return '<circle cx="'+X(e).toFixed(1)+'" cy="'+Y(e[f],a1,b1).toFixed(1)+'" r="4" fill="'+col+'"/>'}).join("")}
+ return '<svg class="ch" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+t("Grafik tren suasana hati dan intensitas","Mood and intensity trend chart")+'"><line x1="14" y1="106" x2="306" y2="106" stroke="#9990b0" stroke-opacity=".4"/>'+pl(es.filter(function(e){return e.mood}),"mood",1,5,"#7B61C9")+pl(es.filter(function(e){return e.int!=null}),"int",0,10,"#D9772B","6 5")+'</svg>'}
+function counts(a){var c={};a.forEach(function(e){e.emo.forEach(function(k){if(k!=="unknown")c[k]=(c[k]||0)+1})});var ks=Object.keys(c).sort(function(x,y){return c[y]-c[x]});return{c:c,ks:ks,tot:ks.reduce(function(s,k){return s+c[k]},0)}}
+function snip(e){return esc((e.a.filter(function(x){return x.trim()})[0]||"").slice(0,90))}
+function insV(){var today=ds(new Date()),c;if(S.range==="m")c=today.slice(0,8)+"01";else{var x=new Date();x.setDate(x.getDate()-S.range);c=ds(x)}
+ var es=asc(D.entries.filter(function(e){return e.date>=c})),cn=counts(es),ms=D.entries.filter(function(e){return e.date.slice(0,7)===today.slice(0,7)}),mc=counts(ms),mn=D.notes.filter(function(n){return n.date.slice(0,7)===today.slice(0,7)}).sort(function(a,b){return a.date<b.date?1:-1}).slice(0,5);
+ var rg=[[7,"7H","7D"],["m","Bulan ini","This month"],[90,"90H","90D"],[365,"1T","1Y"]],top5=cn.ks.slice(0,5),off=0,C=251.3,dn="";
+ top5.forEach(function(k,i){var l=cn.c[k]/cn.tot*C;dn+='<circle cx="50" cy="50" r="40" fill="none" stroke="'+CL[i]+'" stroke-width="16" stroke-dasharray="'+l.toFixed(1)+" "+(C-l).toFixed(1)+'" stroke-dashoffset="'+(-off).toFixed(1)+'" transform="rotate(-90 50 50)"/>';off+=l});
+ var nem=es.filter(function(e){return e.emo.length}).length;
+ return top(t("Wawasan","Insights"))+'<div class="row" style="margin:8px 0">'+rg.map(function(r){return '<button class="chip'+(S.range===r[0]?" on":"")+'" data-a="range" data-v="'+r[0]+'">'+t(r[1],r[2])+'</button>'}).join("")+'</div>'
+ +'<div class="cd"><div class="row rs"><h3>'+t("Tren emosi","Emotional trends")+'</h3><span class="mu">'+es.length+' '+t("catatan","notes")+'</span></div>'+chart(es,c)+'<div class="row mu"><span style="color:#7B61C9">● '+t("Suasana hati","Mood")+'</span><span style="color:#D9772B">● '+t("Intensitas","Intensity")+'</span></div>'+(es.length<5?'<div class="nt">'+t("Baru "+es.length+" catatan. "+(5-es.length)+" lagi untuk mulai melihat pola.",es.length+" notes so far. "+(5-es.length)+" more to start seeing patterns.")+'</div>':'')+'</div>'
+ +'<div class="cd"><h3>'+t("Kosakata emosiku","My emotional vocabulary")+'</h3>'+(cn.tot?'<div class="row" style="gap:16px;margin-top:10px"><svg viewBox="0 0 100 100" width="120" height="120" role="img" aria-label="'+t("Diagram donat kosakata emosi","Emotion vocabulary donut")+'">'+dn+'<text x="50" y="48" text-anchor="middle" font-size="18" font-weight="700" fill="currentColor">'+nem+'</text><text x="50" y="62" text-anchor="middle" font-size="9" fill="currentColor">'+t("catatan","notes")+'</text></svg><div style="flex:1;min-width:150px">'+top5.map(function(k,i){return '<button class="chip" style="display:flex;width:100%;justify-content:space-between;margin-bottom:4px;'+(S.vf===k?"border-color:var(--ac);":"")+'" data-a="vf" data-v="'+esc(k)+'"><span style="color:'+CL[i]+'">●</span><span>'+esc(el(k))+'</span><b>'+Math.round(cn.c[k]/cn.tot*100)+'%</b></button>'}).join("")+'</div></div><div class="mu" style="margin-top:6px">'+t("Hanya kata yang kamu pilih sendiri. Ketuk untuk melihat catatannya.","Only words you chose yourself. Tap to see the notes.")+'</div>'
+  +(S.vf?es.filter(function(e){return e.emo.indexOf(S.vf)>-1}).map(function(e){return '<div class="nt"><small>'+fd(e.date)+'</small><br>'+(snip(e)||"—")+'</div>'}).join(""):""):'<p class="mu">'+t("Belum ada kata emosi yang kamu pilih.","No emotion words chosen yet.")+'</p>')+'</div>'
+ +'<div class="ins"><h3>'+t("Ringkasan bulan ini","This month’s summary")+'</h3><p style="margin:6px 0 0">'+(mc.ks.length?t("Kata yang paling sering muncul bulan ini: "+esc(el(mc.ks[0]))+" ("+mc.c[mc.ks[0]]+" dari "+ms.length+" catatan).","The word that appeared most this month: "+esc(el(mc.ks[0]))+" ("+mc.c[mc.ks[0]]+" of "+ms.length+" notes)."):t("Belum ada kata emosi yang kamu pilih bulan ini.","No emotion words chosen this month yet."))+'</p></div>'
+ +'<div class="cd"><h3>'+t("Catatan bulan ini","This month’s notes")+'</h3>'+(mn.length?mn.map(function(n){var ty=NT.filter(function(x){return x[0]===n.type})[0];return '<div class="nt"><small>'+t(ty[1],ty[2])+' · '+fd(n.date)+'</small><br>'+esc(n.text.slice(0,140))+'</div>'}).join(""):'<p class="mu">'+t("Belum ada catatan bebas bulan ini.","No free notes this month.")+'</p>')+'</div>'}
+function st3(a){var w={},q5=0,q6=0;a.forEach(function(e){e.emo.forEach(function(k){if(k!=="unknown")w[k]=1});if(e.a[4].trim())q5++;if(e.a[5].trim())q6++});return{w:Object.keys(w).length,q5:q5,q6:q6}}
+function ar(n,f){return n>f?"↑":n<f?"↓":"→"}
+function jouV(){var es=asc(D.entries),mo={};D.entries.concat(D.notes).forEach(function(e){var m=e.date.slice(0,7);mo[m]=(mo[m]||0)+1});var ms=Object.keys(mo).sort().reverse(),h=top(t("Perjalananku","My Journey"));
+ h+='<div class="cd"><h3>'+t("Riwayat","History")+'</h3>'+(ms.length?'<div class="tl">'+ms.map(function(m){return '<div><b>'+pd(m+"-01").toLocaleDateString(loc(),{month:"long",year:"numeric"})+'</b> · '+mo[m]+' '+t("catatan","notes")+'</div>'}).join("")+'</div>':'<p class="mu">'+t("Belum ada catatan.","No notes yet.")+'</p>')+'</div>';
+ h+='<div class="cd"><h3>'+t("Dulu & Sekarang","Then & Now")+'</h3>';
+ if(es.length<2)h+='<p class="mu">'+t("Tambahkan satu catatan Ruang Aman lagi untuk membandingkan dua momen.","Add one more Safe Space note to compare two moments.")+'</p>';
+ else{var f=es[0],n=es[es.length-1];function cx(e,l){return '<div><span class="mu">'+l+' · '+fd(e.date)+'</span><div class="row" style="margin:6px 0;gap:4px">'+(e.mood?'<span>'+MJ[e.mood-1]+'</span>':'')+e.emo.slice(0,2).map(function(k){return '<span class="chip on" style="min-height:0;padding:2px 10px;font-size:13px">'+esc(el(k))+'</span>'}).join("")+'</div>'+(snip(e)?'“'+snip(e)+'”':'')+'</div>'}
+  h+='<div class="cmp">'+cx(f,t("Dulu","Then"))+cx(n,t("Sekarang","Now"))+'</div>'}
+ h+='</div>';
+ if(es.length<6)h+='<div class="cd"><h3>'+t("Pergeseran bermakna","A meaningful shift")+'</h3><p class="mu">'+t("Butuh minimal 6 catatan Ruang Aman (baru "+es.length+") agar perbandingannya berarti.","Needs at least 6 Safe Space notes (so far "+es.length+") for the comparison to mean anything.")+'</p></div>';
+ else{var a=st3(es.slice(0,3)),b=st3(es.slice(-3)),p=[];if(b.w>a.w)p.push(t("memakai lebih banyak kata emosi yang berbeda","used more different emotion words"));if(b.q5>a.q5)p.push(t("lebih sering menuliskan kebutuhanmu","wrote about your needs more often"));if(b.q6>a.q6)p.push(t("lebih sering menulis pesan untuk dirimu sendiri","wrote messages to yourself more often"));
+  var auto=p.length?t("Dibanding tiga catatan pertamamu, dalam tiga catatan terakhir kamu ","Compared with your first three notes, in your last three you ")+p.join(", ")+".":t("Belum ada perubahan yang menonjol pada tiga hal ini.","No standout change in these three things yet.");
+  h+=D.hs?'<div class="cd"><button class="btn g" data-a="hs">'+t("Tampilkan Pergeseran bermakna","Show the meaningful shift")+'</button></div>':'<div class="ins"><h3>'+t("Pergeseran bermakna","A meaningful shift")+'</h3>'+(S.eds?'<textarea data-s="1" style="min-height:90px;margin-top:8px">'+esc(D.shift||auto)+'</textarea>':'<p style="margin:6px 0">'+esc(D.shift||auto)+'</p>')+'<div class="mu" style="color:#2B2540">'+t("Dasar: ","Basis: ")+a.w+' → '+b.w+t(" kata emosi berbeda · "," different emotion words · ")+es.length+t(" catatan"," notes")+'</div><div class="row"><button class="btn g" style="width:auto;color:#4A3A86" data-a="eds">'+(S.eds?t("Simpan kalimat","Save text"):t("Ubah kalimat","Edit text"))+'</button><button class="btn g" style="width:auto;color:#4A3A86" data-a="hs">'+t("Sembunyikan","Hide")+'</button></div></div>';
+  h+='<div class="cd"><h3>'+t("Sekilas pertumbuhan","A glimpse of growth")+'</h3>'
+  +'<div class="gc"><b><span>'+t("Kesadaran emosi","Emotional awareness")+'</span><span>'+ar(b.w,a.w)+'</span></b>'+b.w+t(" kata emosi berbeda, sebelumnya "," different emotion words, before ")+a.w+'.</div>'
+  +'<div class="gc"><b><span>'+t("Menghadapi & menenangkan diri","Coping & regulation")+'</span><span>'+ar(b.q5,a.q5)+'</span></b>'+t("Menuliskan kebutuhan di "+b.q5+" dari 3 catatan terakhir, sebelumnya "+a.q5+" dari 3.","Wrote about needs in "+b.q5+" of the last 3 notes, before "+a.q5+" of 3.")+'</div>'
+  +'<div class="gc"><b><span>'+t("Perspektif","Perspective")+'</span><span>'+ar(b.q6,a.q6)+'</span></b>'+t("Menulis pesan untuk diri sendiri di "+b.q6+" dari 3, sebelumnya "+a.q6+" dari 3.","Wrote a message to myself in "+b.q6+" of 3, before "+a.q6+" of 3.")+'</div><p class="mu">'+t("Dihitung dari tulisanmu sendiri. Bukan penilaian kondisi.","Counted from your own writing. Not an assessment of your condition.")+'</p></div>'}
+ return h}
+function dt(ti,b){return '<details style="border-top:1px solid var(--ln);padding:10px 0"><summary style="cursor:pointer;font-weight:600;min-height:32px">'+ti+'</summary><div class="mu" style="margin-top:6px;font-size:15px">'+b+'</div></details>'}
+function PV(){return '<div class="cd"><h3>'+t("Data & privasi","Data & privacy")+'</h3>'
++dt(t("Apa yang disimpan","What is stored"),t("Suasana hati, jawaban Ruang Aman, kata emosi, catatan bebas, nama panggilan, dan pilihan bahasa. Hanya yang kamu masukkan sendiri.","Your mood, Safe Space answers, emotion words, free notes, nickname, and language choice. Only what you enter yourself."))
++dt(t("Di mana disimpan","Where it is stored"),t("Hanya di browser perangkat ini. Tidak dikirim ke server mana pun, termasuk ke pengembang. Pengembang tidak bisa melihat catatanmu.","Only in this device’s browser. Nothing is sent to any server, including the developer. The developer cannot see your notes."))
++dt(t("Siapa yang bisa melihat","Who can see it"),t("Siapa pun yang bisa membuka browser atau perangkat ini. Data belum dienkripsi, jadi hindari perangkat bersama.","Anyone who can open this browser or device. Data is not encrypted yet, so avoid shared devices."))
++dt(t("Pihak ketiga","Third parties"),t("Tidak ada analitik, iklan, atau pelacak. Aplikasi tidak memanggil situs lain.","No analytics, ads, or trackers. The app makes no calls to other sites."))
++dt(t("Kendalimu","Your controls"),t("Kamu bisa mengekspor semua catatan (JSON), memulihkannya lewat Impor, dan menghapus semuanya kapan saja di bawah ini. Menghapus data situs di browser juga menghapus catatanmu.","You can export all notes (JSON), restore them with Import, and delete everything any time below. Clearing site data in your browser also deletes your notes."))
++dt(t("Jika kamu ikut menguji","If you are testing"),t("Ini versi uji. Pengembang tidak menerima catatanmu. Jika diminta umpan balik, ceritakan pengalaman memakai aplikasinya, bukan isi catatanmu, dan jangan kirim berkas cadangan.","This is a test version. The developer does not receive your notes. If asked for feedback, describe your experience of using the app, not your notes, and do not send your backup file."))
++dt(t("Batas aplikasi","App limits"),t("Alat refleksi, bukan diagnosis atau terapi. Jika terasa terlalu berat atau kamu berpikir untuk menyakiti diri, hubungi layanan darurat setempat atau orang yang kamu percaya.","A reflection tool, not a diagnosis or therapy. If things feel too heavy or you are thinking of harming yourself, contact local emergency services or someone you trust."))
++'</div>'}
+function prvV(){return top(t("Saya","Me"))+'<div class="mu" style="margin:4px 0">'+t("Privasi & Cadangan","Privacy & Backup")+'</div>'+'<div class="cd"><div class="sm">'+t("Nama panggilan (opsional, hanya untuk sapaan)","Nickname (optional, used only for the greeting)")+'</div><input type="text" id="nm" value="'+esc(D.name)+'" maxlength="40" style="margin-top:8px"></div>'
+ +'<div class="cd"><p>'+t("Catatanmu disimpan hanya di browser perangkat ini. Tidak ada akun, server, analitik, atau skrip pihak ketiga untuk datamu. Pengembang tidak bisa membaca catatanmu.","Your notes are stored only in this device’s browser. No account, server, analytics, or third-party scripts touch your data. The developer cannot read your notes.")+'</p><p class="mu">'+t("Data ini belum dienkripsi: siapa pun yang bisa membuka browser ini bisa membacanya. Jika data situs dihapus, catatan hilang, jadi buat cadangan.","This data is not encrypted yet: anyone who can open this browser can read it. If site data is cleared, notes are lost, so keep a backup.")+'</p></div>'
+ 
+ +PV()+'<div class="cd"><h3>'+t("Cadangan","Backup")+'</h3><p class="mu">'+t("Ekspor menampilkan JSON tanpa enkripsi; simpan di tempat aman. Untuk impor, tempel JSON atau pilih berkas, lalu tekan Impor (menggantikan semua catatan).","Export shows unencrypted JSON; keep it somewhere safe. To import, paste JSON or choose a file, then tap Import (replaces all notes).")+'</p><textarea id="bx" style="min-height:90px">'+esc(S.bx)+'</textarea><div class="row" style="margin-top:8px"><button class="chip" data-a="exp">'+t("Ekspor","Export")+'</button><button class="chip" data-a="copy">'+t("Salin","Copy")+'</button><button class="chip" data-a="imp">'+(S.arm==="imp"?t("Ketuk lagi","Tap again"):t("Impor","Import"))+'</button></div><input type="file" id="fi" accept=".json,application/json" style="margin-top:8px;max-width:100%"></div>'
+ +'<button class="btn g" data-a="wipe">'+(S.arm==="wipe"?t("Ketuk lagi untuk konfirmasi","Tap again to confirm"):t("Hapus semua catatan","Delete all notes"))+'</button>'}
+function render(){if(Q("#bx"))S.bx=Q("#bx").value;
+ var v=S.flow==="path"?pathV():S.flow==="safe"?safeV():S.flow==="free"?freeV():{home:homeV,insight:insV,journey:jouV,privacy:prvV}[S.tab]();
+ Q("#m").innerHTML=v+(S.br?brV():"");Q("#nv").style.display=S.flow||S.br?"none":"flex";
+ Q("#nv").innerHTML=[["home","Tulis","Write","home"],["insight","Wawasan","Insights","ins"],["journey","Perjalanan","Journey","jou"],["privacy","Saya","Me","me"]].map(function(x){return '<button class="'+(S.tab===x[0]?"on":"")+'" data-a="tab" data-v="'+x[0]+'">'+ic(x[3])+t(x[1],x[2])+'</button>'}).join("")}
+function sync(){if(S.flow==="safe"&&S.st>=1&&S.st<=6){var x=Q("[data-q]");if(x)S.dr.a[S.st-1]=x.value}if(S.flow==="free"){var y=Q("[data-n]");if(y)S.nt.text=y.value}var z=Q("[data-s]");if(z)D.shift=z.value}
+function two(k,fn){if(S.arm===k){S.arm="";fn()}else{S.arm=k;render()}}
+function stopBr(){if(S.tm){clearInterval(S.tm);S.tm=null}S.br=null}
+function act(a,v){if(S.arm&&S.arm!==a)S.arm="";sync();
+ if(a==="lang"){S.lang=v;try{localStorage.setItem("is-lang",v)}catch(e){}}
+ else if(a==="tab"){S.tab=v;S.flow="";S.vf=""}
+ else if(a==="mood")S.mood=S.mood===+v?null:+v;
+ else if(a==="go"){S.flow="path"}
+ else if(a==="back")S.flow="";
+ else if(a==="mo"){if(!S.mood){toast(t("Pilih suasana hati dulu.","Pick a mood first."));return}D.entries.push(ne({id:Date.now().toString(36),date:ds(new Date()),mood:S.mood,a:[]}));save();S.mood=null;S.flow="";S.tab="insight";toast(t("Tersimpan ✓","Saved ✓"))}
+ else if(a==="safe"){S.dr={mood:S.mood,int:null,aft:null,emo:[],a:["","","","","",""]};S.st=0;S.flow="safe"}
+ else if(a==="free"){S.nt={type:"insight",text:""};S.flow="free"}
+ else if(a==="sb"){if(S.st===0||S.st===8)S.flow="path";else S.st--}
+ else if(a==="sn")S.st++;
+ else if(a==="clr")S.dr[v]=null;
+ else if(a==="emo"){var i=S.dr.emo.indexOf(v);if(i>-1)S.dr.emo.splice(i,1);else{if(v==="unknown")S.dr.emo=[];else S.dr.emo=S.dr.emo.filter(function(x){return x!=="unknown"});S.dr.emo.push(v)}}
+ else if(a==="addemo"){var w=Q("#ce").value.trim().slice(0,40);if(w&&S.dr.emo.indexOf(w)<0){S.dr.emo=S.dr.emo.filter(function(x){return x!=="unknown"});S.dr.emo.push(w)}}
+ else if(a==="fin"){D.entries.push(ne({id:Date.now().toString(36),date:ds(new Date()),mood:S.dr.mood,int:S.dr.int,aft:S.dr.aft,emo:S.dr.emo,a:S.dr.a}));save();S.mood=null;S.st=8}
+ else if(a==="ft")S.nt.type=v;
+ else if(a==="fs"){if(!S.nt.text.trim()){toast(t("Tulis sesuatu dulu.","Write something first."));return}D.notes.push(nn({id:Date.now().toString(36),date:ds(new Date()),type:S.nt.type,text:S.nt.text}));save();S.flow="";S.tab="insight";toast(t("Tersimpan ✓","Saved ✓"))}
+ else if(a==="range")S.range=v==="m"?"m":+v;else if(a==="vf")S.vf=S.vf===v?"":v;
+ else if(a==="eds"){if(S.eds){D.shift=D.shift.slice(0,600);save()}S.eds=!S.eds}
+ else if(a==="hs"){D.hs=!D.hs;save()}
+ else if(a==="br"){S.br={s:0};S.tm=setInterval(function(){S.br.s++;var x=S.br.s%10,b=Q("#bt"),c=Q("#bs");if(b)b.textContent=x<4?t("Tarik napas","Breathe in"):t("Buang napas","Breathe out");if(c)c.textContent=Math.max(0,60-S.br.s);if(S.br.s>=60){stopBr();render()}},1000)}
+ else if(a==="brx")stopBr();
+ else if(a==="exp")S.bx=JSON.stringify({entries:D.entries,notes:D.notes},null,1);
+ else if(a==="copy"){var bx=Q("#bx");bx.select();try{navigator.clipboard.writeText(bx.value).then(function(){toast(t("Tersalin ✓","Copied ✓"))},function(){document.execCommand("copy")})}catch(e){try{document.execCommand("copy")}catch(e2){}}return}
+ else if(a==="imp"){two("imp",function(){try{var j=JSON.parse(S.bx);if(!j||!Array.isArray(j.entries)||!j.entries.every(okd)||(j.notes&&!j.notes.every(okd)))throw 0;D.entries=j.entries.map(ne);D.notes=(j.notes||[]).map(nn);save();toast(t("Selesai ✓","Done ✓"));render()}catch(x){toast(t("Data tidak valid; tidak ada yang diubah.","Invalid data; nothing changed."))}});return}
+ else if(a==="wipe"){two("wipe",function(){D.entries=[];D.notes=[];D.shift="";D.hs=false;save();toast(t("Selesai ✓","Done ✓"));render()});return}
+ render()}
+document.addEventListener("click",function(e){var b=e.target.closest("[data-a]");if(b)act(b.dataset.a,b.dataset.v)});
+document.addEventListener("input",function(e){var x=e.target;if(x.type==="range"&&x.dataset.f&&S.dr){S.dr[x.dataset.f]=+x.value;Q("#v_"+x.dataset.f).textContent=x.value}});
+document.addEventListener("change",function(e){var x=e.target;if(x.id==="nm"){D.name=x.value.trim().slice(0,40);save();toast(t("Tersimpan ✓","Saved ✓"))}
+ else if(x.id==="fi"&&x.files[0]){var r=new FileReader();r.onload=function(){S.bx=String(r.result);render()};r.readAsText(x.files[0])}});
+if("serviceWorker" in navigator)addEventListener("load",function(){navigator.serviceWorker.register("service-worker.js").catch(function(){})});try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist()}catch(e){}
+init();render();
+})();
+</script></body></html>
